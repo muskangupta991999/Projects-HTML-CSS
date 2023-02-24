@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+}
+nav {
+  background-color: #458f90;
+  color: #f5deb3;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  text-shadow: 0 0 5px #f5deb3;
+}
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  position: relative;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.box {
+  border: 2px solid #458f90;
+  font-size: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: #d5f1f1;
+  cursor: pointer;
+}
+.gameInfo {
+  padding: 0 35px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+#reset {
+  margin: 0 23px;
+  padding: 1px 18px;
+  background: #458f90;
+  color: #f5deb3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.line {
+  background: black;
+  height: 3px;
+  width: 30vw;
+  position: absolute;
+  background-color: #458f90;
+  transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .gameInfo {
+    margin-top: 34px;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}
